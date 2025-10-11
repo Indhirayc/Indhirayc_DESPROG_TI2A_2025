@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("document").click(function(){
+                $("h2").hide();
+                $(".subjudul").hide();
+                $("#paragraf").hide();
+                $("#paragraf.dua").hide();
+                $("div p.paragraf").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Ini adalah Judul Bab</h2>
+    <h3 class="subjudul">Ini adalah paragraf pertama</h3>
+    <p id="paragraf">Ini adalah paragraf pertama</p>
+    <p id="paragraf" class="dua">Ini adalah paragraf kedua</p>
+    <div>
+        <p class="paragraf">
+            Ini adalah paragraf ketiga
+        </p>
+    </div>
+    <p> Ini paragraf yang akan ditampilkan</p>
+    <button> Klik Saya!</button>
+</body>
+</html>
