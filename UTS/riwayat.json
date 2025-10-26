@@ -1,0 +1,37 @@
+[
+    {
+        "nama": "indhira",
+        "email": "indhirayuantikac1176@gmail.com",
+        "bmi": 1,
+        "kategori": "Underweight",
+        "waktu": "2025-10-19 07:04:30"
+    },
+    {
+        "nama": "alsa",
+        "email": "nailahslsb@gmail.com",
+        "bmi": 17.6,
+        "kategori": "Underweight",
+        "waktu": "2025-10-23 01:14:05"
+    },
+    {
+        "nama": "la",
+        "email": "laksa@gmail.com",
+        "bmi": 23,
+        "kategori": "Normal",
+        "waktu": "2025-10-23 01:53:13"
+    },
+    {
+        "nama": "Laksa",
+        "email": "laksa@gmail.com",
+        "bmi": 23,
+        "kategori": "Normal",
+        "waktu": "2025-10-23 01:58:57"
+    },
+    {
+        "nama": "Laksa",
+        "email": "laksa@gmail.com",
+        "bmi": 17.7,
+        "kategori": "Underweight",
+        "waktu": "2025-10-23 01:59:32"
+    }
+]

@@ -1,0 +1,380 @@
+:root {
+  --bg: #F9FAFB;          /* Warna latar belakang utama */
+  --muted: #6B7280;       /* Warna teks sekunder */
+  --accent: #4F46E5;      /* Warna utama (aksen / tombol) */
+  --text: #111827;        /* Warna teks utama */
+  --card: #FFFFFF;        /* Warna latar belakang kartu / kontainer */
+  --border: #E5E7EB;      /* Warna border / garis pemisah */
+  --radius: 10px;           /* Radius border untuk elemen membulat */
+  --container: 1100px;      /* Lebar maksimum kontainer */
+  font-family: "Inter", system-ui, Ari  al, sans-serif; /* Font global */
+}
+
+* { box-sizing: border-box; } /* Semua elemen menghitung ukuran termasuk padding & border */
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;  /* Agar teks lebih halus */
+  padding-top: 70px; /* Ruang untuk header tetap di atas */
+}
+
+/* utilities */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 28px 24px;
+
+}
+
+/* header */
+.site-header {
+  position: fixed; /* Header tetap di atas saat scroll */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; /* Supaya di atas elemen lain */
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 20px;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo-dot {
+  width: 22px; height: 22px;
+  border-radius: 50%; /* Membuat bulat */
+  background: var(--accent);
+}
+.brand-text { 
+  font-weight: 600; 
+  color: var(--text); 
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.main-nav a:hover { color: var(--accent); }
+
+/* hero */
+.hero {
+  padding: 50px 0 40px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  background: var(--card);
+  box-shadow: 0 1px 20px rgba(130, 139, 159, 0.05);
+}
+.hero-title { font-size: 30px; margin: 0 0 8px; font-weight: 800; }
+.hero-sub { color: var(--muted); margin: 0 0 16px; }
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 6px 14px rgba(78, 70, 228, 0.25);
+}
+
+/* Tombol utama (Hitung BMI & Hitung Ulang) */
+.btn.primary,
+.btn.ghost {
+  background: var(--accent);
+  color: #fff;
+  border: 1.5px solid var(--accent);
+}
+
+/* Hover dan focus efek sama */
+.btn.primary:hover,
+.btn.ghost:hover,
+.btn.primary:focus,
+.btn.ghost:focus {
+  background: #3730A3; /* versi lebih gelap */
+  border-color: #3730A3;
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Efek klik */
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.4);
+}
+
+/* Tombol nonaktif */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Efek tambahan ringan */
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+/* sections */
+.section {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+/* Formulir */
+.form-section .grid-2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-section .section-title {
+  width: 100%;
+  text-align: center;
+}
+
+/* Judul tiap section */
+.section-title {
+  font-size: 24px;
+  margin: 0 0 14px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--text);
+}
+.section-subtitle {
+  font-size: 20px;
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: var(--text);
+}
+.muted { color: var(--muted); }
+.small { font-size: 0.85rem; }
+
+/*Grid dua kolom (untuk form atau konten) */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+}
+
+/* form card */
+.form-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-top: 12px;
+  box-shadow: 0 6px 20px rgba(17,24,39,0.05);
+}
+.row { display: flex; gap: 14px; margin-bottom: 10px; }
+.input-group { flex: 1; }
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+/* Efek saat input difokuskan */
+.input-group input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
+}
+
+/* Pesan error validasi */
+.error {
+  color: #EF4444;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+/* actions Tombol submit di tengah */
+.form-actions { text-align: center; margin-top: 10px; }
+
+/* illustration */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.card.small {
+  padding: 16px;
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+.media-placeholder {
+  border-radius: 8px;
+  padding: 12px;
+  background: #F3F4F6;
+  color: var(--text);
+}
+
+/* hasil */
+.hasil-card {
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+.field { margin-bottom: 10px; }
+.field label {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+  display: block;
+}
+.readonly {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* tombol "Hitung Ulang" di tengah */
+.result-actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18px 0;
+}
+
+/* riwayat */
+.riwayat-list {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+.history {
+  list-style: none; /* Hilangkan bullet */
+  padding: 0;
+  margin: 0;
+}
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.history-item:last-child { border-bottom: none; }
+.history-item .avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #E5E7EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+.history-item .info { flex: 1; min-width: 0; }
+.name { font-weight: 700; }
+.email { font-size: 0.9rem; color: var(--muted); }
+.meta { text-align: right; min-width: 160px; }
+.bmi { font-weight: 700; color: var(--text); }
+.kategori { font-size: 0.9rem; color: var(--muted); }
+
+/* footer */
+.footer {
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+  background: var(--card);
+}
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+.footer a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer a:hover { color: var(--accent); }
+
+/* Information Section */
+.info-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Card yang membungkus teks dan gambar */
+.info-card {
+  display: flex;
+  flex-direction: column; /* gambar di bawah teks */
+  align-items: center;
+  gap: 1.2rem;
+  background-color: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius, 16px);
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+  padding: 1.5rem;
+  max-width: var(--container);
+  width: 100%;
+}
+
+/* Teks di dalam card */
+.info-text {
+  text-align: justify;
+}
+
+/* Gambar lebih besar dan di tengah */
+.info-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.info-image img {
+  max-width: 80%; /* perbesar ukuran gambar */
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius, 12px);
+}
+
+
+/* responsive */
+@media (max-width: 920px) {
+  .grid-2 { grid-template-columns: 1fr; } /* Ubah grid jadi 1 kolom */
+  .row { flex-direction: column; } /* Form input vertikal */
+  .meta { text-align: left; }
+  .container { padding: 28px 18px; }
+  .header-inner { padding: 10px 18px; }
+  .hero-title { font-size: 26px; } /* Judul lebih kecil di HP */
+}
