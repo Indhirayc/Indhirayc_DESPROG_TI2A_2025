@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Bootstrap Saya</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Esatovin</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="#">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center bg-light mt-3">
+    <h1 class="display-4">Selamat Datang!</h1>
+    <p class="lead">Ini adalah halaman utama webnya.</p>
+    <a href="#" class="btn btn-primary btn-lg">Pelajari Selengkapnya</a>
+  </div>
+
+  <div class="container text-center">
+    <h3 class="mb-4">Gambar Ilustrasi</h3>
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+         class="img-fluid rounded shadow" alt="Contoh Gambar" width="80%">
+  </div>
+
+  <div class="container mt-5">
+    <h3 class="text-center mb-4">Fitur Website</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Desain Responsif</h5>
+            <p class="card-text">Tampilan website ini menyesuaikan ukuran layar baik di komputer maupun ponsel.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Mudah Dikustomisasi</h5>
+            <p class="card-text">Gunakan class-class Bootstrap untuk mengatur warna, tata letak, dan tipografi.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Modern dan Cepat</h5>
+            <p class="card-text">Bootstrap membuat tampilan web menjadi modern tanpa banyak menulis CSS manual.</p>
+            <a href="#" class="btn btn-outline-danger btn-sm">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ FOOTER -->
+  <footer class="mt-5">
+    <p>© Copyright reserved</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
